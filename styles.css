@@ -17,6 +17,7 @@
     font-family: "Lucida Console", "Courier New", monospace;
     font-size: 35px;
     padding: 10px;
+    text-underline: none;
     padding-top: 15px;
     color: #01021FFF;
 }
@@ -126,7 +127,12 @@
 .dropdown-content a:hover {
     background-color: #ddd;
 }
-
+.item{
+    text-decoration: none;
+}
+.item a:hover {
+ text-decoration: plum;
+}
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
