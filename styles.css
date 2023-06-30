@@ -109,7 +109,7 @@
 }
 .section{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     padding: 20px;
 }
 /* Links inside the dropdown */
