@@ -7,48 +7,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
 </head>
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div class="typing-container">
+    <span style="color:green;margin-right:15px">➜</span>
+    <span style="color:lightseagreen;margin-right:15px">~</span>
+    <span id="terminal-title"></span>
+    <span class="cursor"></span>
+</div>
 
-<div class="header">
-    <div class="h1">Leo Marek</div>
-    <div style="text-align: right;font-size: 20px;font-family: 'Candara Heavy';padding: 5px">lnm7@rice.edu  (925)788-6276</div>
-    <div class="navbar">
-        <div class="fade-in">
+<div class="navbar">
+    <div class="fade-in">
 
-            <a href="https://leomarek.github.io/">Home</a>
+        <a href="https://leomarek.github.io/">Home</a>
 
-            <div class="dropdown">
-                <button class="dropbtn">Projects
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="https://rice.digication.com/vacuum-visionaries/final-solution" target="_blank">Low-Cost NWPT Machine</a>
-                    <a href="design">Engineering Design</a>
-                    <a href="https://rice.digication.com/eell-technologies/engi-120-220" target="_blank">Crash Test Exhibit</a>
-                    <a href="https://devpost.com/like2invent" target="_blank">Hackathon Projects</a>
-                    <a href="https://sites.google.com/view/go-cap-it/home" target="_blank">Cap-It</a>
-                </div>
-            </div>
-
-            <a href="resume">Resume</a>
-
-            <div>
-                <a href="https://www.linkedin.com/in/leo-marek/"target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-                         style="width: 30px;height: 30px;padding: 0; filter: inherit">
-                </a>
-                <a href="https://github.com/leomarek"target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png"
-                         style="width: 30px;height: 30px;padding: 0;filter: inherit">
-                </a>
+        <div class="dropdown">
+            <button class="dropbtn">Projects
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="https://rice.digication.com/vacuum-visionaries/final-solution" target="_blank">Low-Cost NWPT Machine</a>
+                <a href="design">Engineering Design</a>
+                <a href="https://rice.digication.com/eell-technologies/engi-120-220" target="_blank">Crash Test Exhibit</a>
+                <a href="https://devpost.com/like2invent" target="_blank">Hackathon Projects</a>
+                <a href="https://sites.google.com/view/go-cap-it/home" target="_blank">Cap-It</a>
             </div>
         </div>
+
+        <a href="resume">Resume</a>
+
+        <a href="https://www.linkedin.com/in/leo-marek/"target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                 style="width: 30px;height: 30px;padding: 0; filter: inherit">
+        </a>
+        <a href="https://github.com/leomarek"target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png"
+                 style="width: 30px;height: 30px;padding: 0;filter: inherit">
+        </a>
     </div>
 </div>
 
-<body>
-<iframe src="LeoMarekResume.pdf" height=900px width=100% style="padding: 25px"></iframe>
+<iframe src="LeoMarekResume.pdf" height=900px width=100% style="padding: 25px; border: 0px"></iframe>
+
 <div class="footer">
-    <h2>Written from scratch in HTML, CSS, and Javascript - Leo Marek - 2023</h2>
+    <h2>Written from scratch in HTML, CSS, and Javascript - Leo Marek - 2024</h2>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const titleElement = document.getElementById('terminal-title');
+        const titleText = 'Leo Marek';
+        let index = 0;
+
+        function typeEffect() {
+            if (index < titleText.length) {
+                titleElement.textContent += titleText[index];
+                index++;
+                setTimeout(typeEffect, 100); // Adjust typing speed here
+            }
+        }
+
+        typeEffect();
+    });
+</script>
 </body>
 </html>

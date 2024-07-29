@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leo Marek</title>
+  <style>
+    .typing-container {
+      font-size: 3.5em;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      padding-left: 1.5em;
+      padding-bottom: 0.5em;
+      padding-top: 0.5em;
+    }
+
+    body {
+      background-color: #282c34; /* Set the desired background color */
+      color: #ffffff; /* Set the text color */
+      font-family: monospace;
+    }
+
+    .cursor {
+      background-color: darkgray;
+      width: 0.5em;
+      height: 1em;
+      margin-left: 0.18em; /* Small gap between text and cursor */
+    }
+
+
+    .header {
+      padding: 5px; /* some padding */
+      background: rgb(1, 2, 31); /* green background */
+      color: #ffffff; /* white text color */
+      font-size: 30px;
+      border-radius: 14px;
+    }
+
+    /* Increase the font size of the <h1> element */
+    .h1 {
+      font-family: "Verdana";
+      text-align: left;
+      font-size: 65px;
+    }
+    .h3{
+      font-family: "Lucida Console", "Courier New", monospace;
+      font-size: 35px;
+      padding: 10px;
+      text-underline: none;
+      padding-top: 15px;
+      color: #01021FFF;
+    }
+    .projects{
+      display: flex;
+      flex-direction: row;
+      padding: 0 1%;
+    }
+    .item{
+      width: 150px;
+      height: 400px;
+      flex: 1;
+      margin: 0 1%;
+      padding-top: 13px;
+      border-width: thick;
+    }
+    /* Style the top navigation bar */
+    .navbar {
+      width: 90%;
+      font-size: 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* Style the navigation bar links */
+    .navbar a {
+      float: left; /* Make sure that the links stay side-by-side */
+      display: block; /* Change the display to block, for responsive reasons (see below) */
+      color: white; /* White text color */
+      text-align: center; /* Center the text */
+      padding: 20px 30px; /* Add some padding */
+      text-decoration: none; /* Remove underline */
+      filter: grayscale(100%) brightness(100);
+      font-size: 30px;
+      border-radius: 10px;
+    }
+
+    /* Right-aligned link */
+    .navbar a.right {
+      float: right; /* Float a link to the right */
+    }
+
+    /* Change color on hover/mouse-over */
+    .navbar a:hover {
+      background-color: #ddd; /* Grey background color */
+      color: black; /* Black text color */
+      filter: none;
+    }
+    /* Ensure proper sizing */
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Column container */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* Create two unequal columns that sits next to each other */
+    /* Sidebar/left column */
+    .side {
+      flex: 30%; /* Set the width of the sidebar */
+      background-color: #f1f1f1; /* Grey background color */
+      padding: 20px; /* Some padding */
+    }
+
+    /* Main column */
+    .main {
+      flex: 70%; /* Set the width of the main content */
+      background-color: white; /* White background color */
+      padding: 20px; /* Some padding */
+    }
+    .footer {
+      padding: 25px; /* Some padding */
+      font-size: 10px;
+      color: #f1f1f1;
+      text-align: center; /* Center text*/
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: dimgrey;
+      min-width: 160px;
+      font-size: 20px;
+      box-shadow: 0px 8px 16px 0px rgb(1, 2, 31);
+      z-index: 1;
+      border-radius: 10px;
+    }
+    .section{
+      display: flex;
+      flex-direction: row;
+      padding: 20px;
+    }
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      float: none;
+      color: white;
+      font-size: 20px;
+      padding: 20px 20px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    }
+    /* Add a grey background color to dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+    .item{
+      text-decoration: none;
+    }
+    .item a:hover {
+      text-decoration: plum;
+    }
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    /* The dropdown container */
+    .dropdown {
+      float: left;
+      overflow: hidden;
+
+    }
+
+    /* Dropdown button */
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 20px 30px; /* Add some padding */
+      background-color: inherit;
+      font-size: 30px;
+      font-family: inherit; /* Important for vertical align on mobile phones */
+      margin: 0; /* Important for vertical align on mobile phones */
+    }
+    /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+      .typing-container {
+        font-size: 3em;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5em;
+      }
+
+      .section {
+        flex-direction: column;
+        max-height: 100%;
+      }
+
+      .projects{
+        display: block;
+        padding-bottom: 20px;
+      }
+      .item{
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+
+    /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+    @media screen and (max-width: 400px) {
+      .navbar a {
+        float: none;
+        width: 100%;
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation-name: fadeIn;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+  <div class="typing-container">
+    <span style="color:green;margin-right:15px">➜</span>
+    <span style="color:lightseagreen;margin-right:15px">~</span>
+    <span id="terminal-title"></span>
+    <span class="cursor"></span>
+  </div>
+
+  <div class="navbar">
+    <div class="fade-in">
+
+      <a href="https://leomarek.github.io/">Home</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">Projects
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="https://rice.digication.com/vacuum-visionaries/final-solution" target="_blank">Low-Cost NWPT Machine</a>
+          <a href="design">Engineering Design</a>
+          <a href="https://rice.digication.com/eell-technologies/engi-120-220" target="_blank">Crash Test Exhibit</a>
+          <a href="https://devpost.com/like2invent" target="_blank">Hackathon Projects</a>
+          <a href="https://sites.google.com/view/go-cap-it/home" target="_blank">Cap-It</a>
+        </div>
+      </div>
+
+      <a href="resume">Resume</a>
+
+      <a href="https://www.linkedin.com/in/leo-marek/"target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+             style="width: 30px;height: 30px;padding: 0; filter: inherit">
+      </a>
+      <a href="https://github.com/leomarek"target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png"
+             style="width: 30px;height: 30px;padding: 0;filter: inherit">
+      </a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <h2>Written from scratch in HTML, CSS, and Javascript - Leo Marek - 2024</h2>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const titleElement = document.getElementById('terminal-title');
+      const titleText = 'Leo Marek';
+      let index = 0;
+
+      function typeEffect() {
+        if (index < titleText.length) {
+          titleElement.textContent += titleText[index];
+          index++;
+          setTimeout(typeEffect, 100); // Adjust typing speed here
+        }
+      }
+
+      typeEffect();
+    });
+  </script>
+</body>
+</html>
