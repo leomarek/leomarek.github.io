@@ -146,7 +146,6 @@ body {
     display: block;
     text-align: left;
 }
-}
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
     background-color: #ddd;
@@ -220,7 +219,7 @@ a:hover {
 .fade-in {
     opacity: 0;
     animation-name: fadeIn;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
