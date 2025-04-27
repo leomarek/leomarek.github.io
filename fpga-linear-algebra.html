@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
-    <title>Leo Marek</title>
+    <title>FPGA-Accelerated Linear Algebra Engine - Leo Marek</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <meta name="google-site-verification" content="GMTcmte9bpQEK79eAELdeplH6NwpNBh0SB-ibk7dLjc" />
 </head>
 <!-- Google tag (gtag.js) -->
@@ -14,7 +15,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-7EN3C04SMX');
 </script>
 <body>
@@ -40,38 +40,31 @@
         </a>
     </div>
 </div>
-<div class = section>
-    <img src="headshot.jpg" style="width: 300px; height: fit-content; padding: 10px">
-    <p style="font-size: 25px; line-height: 40px; padding: 40px; font-family: 'Helvetica Neue Medium Extended', sans-serif;">
-        Hi there! I'm Leo, a student at Rice University studying computer science and electrical and computer engineering.
-        I am a passionate technologist and nerd for optimization, so I strive to understand and optimize complex technical
-        systems from the bottom up. I am deeply interested in digital signal processing, computer architecture, FPGA development, and hardware/software co-design.
-         When I am not busy working on my many personal
-        projects, I spend time outdoors as a collegiate sailor, expert skier, experienced backpacker, and mountain biker.</p>
+
+<div class="project-detail-container" style="display: flex; justify-content: center; align-items: center; width: 100%;">
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTlUI7mHPkekFMo2gO8zsqN_4jB4h8CuAm0y584q2WO6YJRRgiUNrnWC8yIJ_On88F-YKc08u-w6Hnu/pubembed?start=true&loop=true&delayms=5000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </div>
-</div>
-    <div class="footer">
+
+<div class="footer">
     <h2>Written from scratch in HTML, CSS, and Javascript - Leo Marek - 2024</h2>
 </div>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const titleElement = document.getElementById('terminal-title');
-        const titleText = 'Leo Marek';
+        const titleText = 'FPGA Linear Algebra Engine';
         let index = 0;
 
         function typeEffect() {
             if (index < titleText.length) {
                 titleElement.textContent += titleText[index];
                 index++;
-                setTimeout(typeEffect, 100); // Adjust typing speed here
+                setTimeout(typeEffect, 100);
             }
         }
 
         typeEffect();
     });
 </script>
-
-</div>
 </body>
-</html>
+</html> 

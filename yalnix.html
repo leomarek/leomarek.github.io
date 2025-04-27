@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Yalnix Operating System - Leo Marek</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <meta name="google-site-verification" content="GMTcmte9bpQEK79eAELdeplH6NwpNBh0SB-ibk7dLjc" />
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7EN3C04SMX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7EN3C04SMX');
+</script>
+<body>
+<div class="typing-container">
+    <span style="color:green;margin-right:15px">➜</span>
+    <span style="color:lightseagreen;margin-right:15px">~</span>
+    <span id="terminal-title"></span>
+    <span class="cursor"></span>
+</div>
+
+<div class="navbar">
+    <div class="fade-in">
+        <a href="https://leomarek.github.io/">Home</a>
+        <a href="projects">Projects</a>
+        <a href="resume">Resume</a>
+        <a href="https://www.linkedin.com/in/leo-marek/" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                 style="width: 30px;height: 30px;padding: 0; filter: inherit">
+        </a>
+        <a href="https://github.com/leomarek" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png"
+                 style="width: 30px;height: 30px;padding: 0;filter: inherit">
+        </a>
+    </div>
+</div>
+
+<div class="project-detail-container">
+    <div class="project-content">
+        <div class="project-description">
+            <h2>Overview</h2>
+            <p>Yalnix is a Unix-like operating system developed for the RCS421 simulated hardware environment. The project involved implementing core operating system components including a kernel, file system, process scheduler, and virtual memory system.</p>
+
+            <h2>Key Features</h2>
+            <ul>
+                <li>Process Management
+                    <ul>
+                        <li>Process scheduling and context switching</li>
+                        <li>Kernel/user mode protection</li>
+                        <li>Concurrent C program execution</li>
+                    </ul>
+                </li>
+                <li>Virtual Memory System
+                    <ul>
+                        <li>Two-level page table implementation</li>
+                        <li>Translation Lookaside Buffer (TLB)</li>
+                        <li>Dynamic memory allocation</li>
+                    </ul>
+                </li>
+                <li>File System
+                    <ul>
+                        <li>Demand paging implementation</li>
+                        <li>LRU cache for efficient access</li>
+                        <li>Indirect inodes for large file storage</li>
+                    </ul>
+                </li>
+                <li>System Calls
+                    <ul>
+                        <li>Fork and Exec implementations</li>
+                        <li>Read/Write operations</li>
+                        <li>Terminal driver with multi-process support</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>Technical Details</h2>
+            <p>The operating system was implemented in C, with careful attention to memory management and system resource allocation. The project involved extensive testing and debugging to ensure proper functionality of all components.</p>
+
+            <h2>Challenges & Solutions</h2>
+            <ul>
+                <li>Memory Management
+                    <ul>
+                        <li>Implemented efficient page replacement algorithms</li>
+                        <li>Developed robust memory allocation strategies</li>
+                    </ul>
+                </li>
+                <li>Process Synchronization
+                    <ul>
+                        <li>Designed and implemented process scheduling algorithms</li>
+                        <li>Ensured proper context switching between processes</li>
+                    </ul>
+                </li>
+                <li>File System Optimization
+                    <ul>
+                        <li>Implemented caching mechanisms for improved performance</li>
+                        <li>Developed efficient file storage strategies</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <h2>Written from scratch in HTML, CSS, and Javascript - Leo Marek - 2024</h2>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const titleElement = document.getElementById('terminal-title');
+        const titleText = 'Yalnix OS';
+        let index = 0;
+
+        function typeEffect() {
+            if (index < titleText.length) {
+                titleElement.textContent += titleText[index];
+                index++;
+                setTimeout(typeEffect, 100);
+            }
+        }
+
+        typeEffect();
+    });
+</script>
+</body>
+</html> 
